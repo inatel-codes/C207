@@ -1,0 +1,12 @@
+RENAME TABLE nome_atual TO nome_novo; // RENOMEAR UMA TABELA
+
+SELECT * FROM estilo ORDER BY nome; // SELECIONANDO TUDO DA TABELA ESTILO COM ORDEM CRESCENTE DE NOME
+
+SELECT * FROM autor ORDER BY nome DESC; // SELECIONANDO TUDO DA TABELA AUTOR COM ORDEM DECRESCENTE DE NOME
+
+// SELECIONA TODOS OS LIVROS COM OS NOMES DOS SEUS RESPECTIVOS AUTORES, EDITORAS E ESTILOS (INNER JOIN)
+SELECT titulo, sinopse, autor.nome AS 'Autor', editora.nome AS 'Editora', estilo.nome AS 'Estilo' FROM livros 
+INNER JOIN autor ON livros.autor_id = autor.id 
+INNER JOIN editora ON livros.editora_id = editora.id 
+INNER JOIN estilo ON livros.estilo_id = estilo.id;
+

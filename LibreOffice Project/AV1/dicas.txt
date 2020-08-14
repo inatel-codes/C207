@@ -1,0 +1,13 @@
+BANCO DE DADOS:
+
+Banco de dados é uma coleção de informações que se relacionam entre si. Podemos inserir, editar, buscar e excluir informações. Atualmente, 90% das coisas utilizam de um banco de dados para seu funcionamento, como por exemplo: Depósitos em bancos, reservas em hoteis, compra de produtos, acesso em uma biblioteca, etc. 
+
+SGBD (Sistema Gerenciador de Banco de Dados: É o "client" que fica com o usuário, onde eles podem fazer consultas e alterações dos dados.
+
+Server: Geralmente fica localizado em uma máquina, que ficará ligada o tempo todo para manter o funcionamento do banco. Essa parte não fica com o usuario.
+
+SELECT mae.nome as "mae", filha.nome as "filha" FROM mae, filha WHERE mae.cpf = filha.cpf_mae;
+SELECT CAST(count(*)*100.00/(SELECT count(*) FROM usuario) AS decimal) AS "Porcentagem" FROM usuario WHERE id >= 5;
+
+
+
